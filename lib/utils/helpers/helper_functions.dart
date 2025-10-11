@@ -62,15 +62,15 @@ class HelperFunctions {
     return '${text.substring(0, limit)}...';
   }
 
-  static bool isDarkMode() =>
-      Theme.of(Get.context!).brightness == Brightness.dark;
+  static bool isDarkMode(BuildContext context) {
+      return Theme.of(context).brightness == Brightness.dark;}
 
-  static Size screenSize() =>
-      MediaQuery.of(Get.context!).size;
+  static Size screenSize() {
+      return MediaQuery.of(Get.context!).size;}
 
-  static double screenWidth() =>
-      MediaQuery.of(Get.context!).size.width;
+  static double screenWidth()  {
+    return MediaQuery.of(Get.context!).size.width;}
 
-  static double screenHeight() =>
-      MediaQuery.of(Get.context!).size.height;
+  static double screenHeight()  {
+    return MediaQuery.of(Get.context!).size.height;}
 }
