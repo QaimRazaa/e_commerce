@@ -15,7 +15,7 @@ class CustomNavigationBar extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: Obx(
           () => NavigationBar(
-            height: 70,
+            height: 60,
             elevation: 0,
             selectedIndex: controller.selectedIndex.value,
             onDestinationSelected: (index) => controller.selectedIndex.value = index,

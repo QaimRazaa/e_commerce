@@ -9,7 +9,7 @@ class AppColors{
 
   static Color textPrimary = Color(0xFF333333);
   static Color textSecondary = Color(0xFF6c757D);
-  static Color textWhite = Colors.white;
+  static const Color textWhite = Colors.white;
 
   static Color light = Color(0xFFf6f6f6);
   static Color dark = Color(0xFF272727);
