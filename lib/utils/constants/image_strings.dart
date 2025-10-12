@@ -9,4 +9,7 @@ class AppImages{
   static String onBoardingImage1 = "assets/images/on_boarding_images/on-boarding-image-1.png";
   static String onBoardingImage2 = "assets/images/on_boarding_images/on-boarding-image-2.png";
   static String onBoardingImage3 = "assets/images/on_boarding_images/on-boarding-image-3.png";
+
+
+  static String verifyEmail = "assets/images/animations/sammy-line-man-receives-a-mail.png";
 }

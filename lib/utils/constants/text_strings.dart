@@ -27,10 +27,23 @@ class AppTexts{
   static const verificationCode = "Verification Code";
   static const resendEmail = "Resend Email";
   static const and = "and";
+  static const continueText = "Continue";
+  static const submit = "Submit";
+  static const done = "Done";
 
   static const loginTitle = "Welcome Back,";
   static const loginSubTitle = "Discover limitless Choices and Unmatched Convenience";
   static const signUpTitle = "Let's Create your account";
+  static const confirmEmail = "Verify your email Address";
+  static const confirmEmailSubtitle = "Congratulations! Your Account Awaits: Verify your Email to start Shopping and Experience a World of Unrivaled Deals and Personalized Offers";
+  static const accountCreated = "Your Account Successfully created";
+  static const accountCreatedSubtitle = "Welcome to Your Ultimate Shopping Destination. Your Account is Created ";
+  static const forgetPasswordTitle = "Forget Password";
+  static const forgetPasswordSubtitle = "Don't Worry sometimes people can forget too, enter your email and we will send you a password reset link";
+  static const changePasswordTitle = "Password Reset Email Sent";
+  static const changePasswordSubtitle = "Your Account Security is Our Priority! We've sent you a Secure link to safely change your password and keep your Account Protected";
+
+
 
 
 
