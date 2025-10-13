@@ -11,6 +11,10 @@ class DeviceUtils {
   static double bottomNav(BuildContext context) => MediaQuery.of(context).padding.bottom;
   static double appBarHeight = kToolbarHeight;
 
+  static double appBarWeight (){
+    return kToolbarHeight;
+  }
+
   static double keyboardHeight(BuildContext context) => MediaQuery.of(context).viewInsets.bottom;
   static bool isKeyboardVisible(BuildContext context) => MediaQuery.of(context).viewInsets.bottom > 0;
 

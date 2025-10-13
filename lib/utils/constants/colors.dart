@@ -36,7 +36,7 @@ class AppColors{
   static Color grey = Color(0xFFe0e0e0);
   static Color softGrey = Color(0xFFf4f4f4);
   static Color lightGrey = Color(0xFFf9f9f9);
-  static Color white = Color(0xFFffffff);
+  static const Color white = Color(0xFFffffff);
 
   static Gradient linerGradient = LinearGradient(
       begin: Alignment(0.0 ,0.0),

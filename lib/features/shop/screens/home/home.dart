@@ -1,10 +1,6 @@
-import 'package:e_commerce/common/widgets/custom_shapes/curved_edges/curved_edges.dart';
-import 'package:e_commerce/utils/constants/colors.dart';
+import 'package:e_commerce/features/shop/screens/home/widgets/home_appbar_widget.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../common/widgets/custom_shapes/containers/circular_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
-import '../../../../common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -15,27 +11,20 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            CustomCurvedEdgeWidget(child:Container(
-              color: AppColors.primary,
-              padding: EdgeInsets.all(0),
-              child: SizedBox(
-                height: 400,
-                child: PrimaryHeaderContainer(child:
-                  Column(
-                    children: [
-
-                    ],
-                  ),),
+            PrimaryHeaderContainer(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  HomeAppBar(),
+                ],
               ),
-            ),)
+            ),
           ],
         ),
       ),
     );
   }
 }
-
-
 
 
 

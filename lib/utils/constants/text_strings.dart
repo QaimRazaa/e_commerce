@@ -31,6 +31,9 @@ class AppTexts{
   static const submit = "Submit";
   static const done = "Done";
 
+  static const homeAppBarTitle = "Welcome to the store";
+  static const homeAppBarSubtitle = "Qaim Raza";
+
   static const loginTitle = "Welcome Back,";
   static const loginSubTitle = "Discover limitless Choices and Unmatched Convenience";
   static const signUpTitle = "Let's Create your account";
