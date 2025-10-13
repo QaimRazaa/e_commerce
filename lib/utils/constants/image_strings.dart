@@ -12,4 +12,7 @@ class AppImages{
 
 
   static String verifyEmail = "assets/images/animations/sammy-line-man-receives-a-mail.png";
+
+  static String sportIcon = "assets/icons/categories/icons8-bowling-64.png";
+
 }
