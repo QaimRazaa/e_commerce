@@ -26,5 +26,6 @@ class AppImages{
   static  String promoBanner1 = "assets/images/banners/promo-banner-1.png";
   static  String promoBanner2 = "assets/images/banners/promo-banner-2.png";
   static  String promoBanner3 = "assets/images/banners/promo-banner-3.png";
+  static  String promoBanner4 = "assets/images/banners/promo-banner-4.jpg";
 
 }

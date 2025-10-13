@@ -1,13 +1,12 @@
 import 'package:e_commerce/features/shop/screens/home/widgets/home_appbar_widget.dart';
 import 'package:e_commerce/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:e_commerce/features/shop/screens/home/widgets/promo_slider_widget.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/constants/image_strings.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
-import 'package:e_commerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
-import '../../../../common/widgets/image_text/vertical_image_text.dart';
 import '../../../../common/widgets/text/section_heading.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -41,6 +40,17 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(CustomSizes.md),
+              child: PromoSlider(
+                banner: [
+                  AppImages.promoBanner1,
+                  AppImages.promoBanner2,
+                  AppImages.promoBanner3,
+                  AppImages.promoBanner4,
                 ],
               ),
             ),
