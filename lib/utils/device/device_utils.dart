@@ -15,6 +15,10 @@ class DeviceUtils {
     return kToolbarHeight;
   }
 
+  static double getScreenWidth(BuildContext context) {
+    return MediaQuery.of(context).size.width;
+  }
+
   static double keyboardHeight(BuildContext context) => MediaQuery.of(context).viewInsets.bottom;
   static bool isKeyboardVisible(BuildContext context) => MediaQuery.of(context).viewInsets.bottom > 0;
 

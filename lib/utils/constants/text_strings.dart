@@ -32,7 +32,7 @@ class AppTexts{
   static const done = "Done";
 
   static const homeAppBarTitle = "Welcome to the store";
-  static const homeAppBarSubtitle = "Qaim Raza";
+  static const homeAppBarSubtitle = "Syed Qaim Raza";
 
   static const loginTitle = "Welcome Back,";
   static const loginSubTitle = "Discover limitless Choices and Unmatched Convenience";
