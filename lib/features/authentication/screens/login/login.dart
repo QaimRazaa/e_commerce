@@ -26,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
               LoginHeader(dark: dark),
               LoginForm(),
               LoginFormDivider(dividerText: AppTexts.signInWith.capitalize!,),
-              SizedBox(height: CustomSizes.spaceBetweenSections),
+              SizedBox(height: Sizes.spaceBetweenSections),
               LoginSocialButtons(),
             ],
           ),

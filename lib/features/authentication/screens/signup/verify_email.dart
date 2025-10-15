@@ -30,32 +30,32 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(CustomSizes.defaultSpace),
+          padding: EdgeInsets.all(Sizes.defaultSpace),
           child: Column(
             children: [
               Image(
                 image: AssetImage(AppImages.verifyEmail),
                 width: HelperFunctions.screenWidth(),
               ),
-              SizedBox(height: CustomSizes.spaceBetweenSections),
+              SizedBox(height: Sizes.spaceBetweenSections),
               Text(
                 AppTexts.confirmEmail,
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: CustomSizes.spaceBetweenItems),
+              SizedBox(height: Sizes.spaceBetweenItems),
               Text(
                 'qaim123@gmail.com',
                 style: Theme.of(context).textTheme.labelLarge,
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: CustomSizes.spaceBetweenItems),
+              SizedBox(height: Sizes.spaceBetweenItems),
               Text(
                 AppTexts.confirmEmailSubtitle,
                 style: Theme.of(context).textTheme.labelMedium,
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: CustomSizes.spaceBetweenSections),
+              SizedBox(height: Sizes.spaceBetweenSections),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -71,7 +71,7 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
                   child: Text(AppTexts.continueText),
                 ),
               ),
-              SizedBox(height: CustomSizes.spaceBetweenItems),
+              SizedBox(height: Sizes.spaceBetweenItems),
               SizedBox(
                 width: double.infinity,
                 child: TextButton(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomSizes{
+class Sizes{
 
   static double xs = 4;
   static double sm = 8;
@@ -43,7 +43,7 @@ class CustomSizes{
   static double inputFieldRadius = 12;
   static double spaceBetweenInputFields = 16;
 
-  static double cardRadiusLg = 16;
+  static const double cardRadiusLg = 16;
   static double cardRadiusMd = 12;
   static double cardRadiusSm = 10;
   static double cardRadiusXs = 6;

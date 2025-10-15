@@ -69,13 +69,13 @@ class LoginSocialButtons extends StatelessWidget {
           child: IconButton(
             onPressed: () {},
             icon: Image(
-              width: CustomSizes.iconMd,
-              height: CustomSizes.iconMd,
+              width: Sizes.iconMd,
+              height: Sizes.iconMd,
               image: AssetImage(AppImages.google),
             ),
           ),
         ),
-        SizedBox(width: CustomSizes.spaceBetweenItems),
+        SizedBox(width: Sizes.spaceBetweenItems),
         Container(
           decoration: BoxDecoration(
             border: Border.all(color: AppColors.grey),
@@ -84,8 +84,8 @@ class LoginSocialButtons extends StatelessWidget {
           child: IconButton(
             onPressed: () {},
             icon: Image(
-              width: CustomSizes.iconMd,
-              height: CustomSizes.iconMd,
+              width: Sizes.iconMd,
+              height: Sizes.iconMd,
               image: AssetImage(AppImages.facebook),
             ),
           ),
@@ -105,7 +105,7 @@ class LoginForm extends StatelessWidget {
     return Form(
       child: Padding(
         padding: EdgeInsets.symmetric(
-          vertical: CustomSizes.spaceBetweenSections,
+          vertical: Sizes.spaceBetweenSections,
         ),
         child: Column(
           children: [
@@ -115,7 +115,7 @@ class LoginForm extends StatelessWidget {
                 labelText: AppTexts.email,
               ),
             ),
-            SizedBox(height: CustomSizes.spaceBetweenInputFields),
+            SizedBox(height: Sizes.spaceBetweenInputFields),
             TextFormField(
               decoration: InputDecoration(
                 prefixIcon: Icon(Iconsax.password_check),
@@ -123,7 +123,7 @@ class LoginForm extends StatelessWidget {
                 suffixIcon: Icon(Iconsax.eye_slash),
               ),
             ),
-            SizedBox(height: CustomSizes.spaceBetweenInputFields / 2),
+            SizedBox(height: Sizes.spaceBetweenInputFields / 2),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -141,7 +141,7 @@ class LoginForm extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: CustomSizes.spaceBetweenSections),
+            SizedBox(height: Sizes.spaceBetweenSections),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
@@ -149,7 +149,7 @@ class LoginForm extends StatelessWidget {
                 child: Text(AppTexts.signIn),
               ),
             ),
-            SizedBox(height: CustomSizes.spaceBetweenItems),
+            SizedBox(height: Sizes.spaceBetweenItems),
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
@@ -159,7 +159,7 @@ class LoginForm extends StatelessWidget {
                 child: Text(AppTexts.createAccount),
               ),
             ),
-            SizedBox(height: CustomSizes.spaceBetweenSections),
+            SizedBox(height: Sizes.spaceBetweenSections),
           ],
         ),
       ),
@@ -190,7 +190,7 @@ class LoginHeader extends StatelessWidget {
           AppTexts.loginTitle,
           style: Theme.of(context).textTheme.headlineMedium,
         ),
-        SizedBox(height: CustomSizes.sm),
+        SizedBox(height: Sizes.sm),
         Text(
           AppTexts.loginSubTitle,
           style: Theme.of(context).textTheme.bodyMedium,

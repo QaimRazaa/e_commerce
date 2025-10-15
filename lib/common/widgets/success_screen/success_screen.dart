@@ -29,19 +29,19 @@ class SuccessScreen extends StatelessWidget {
                 image: AssetImage(imagePath),
                 width: HelperFunctions.screenWidth(),
               ),
-              SizedBox(height: CustomSizes.spaceBetweenSections),
+              SizedBox(height: Sizes.spaceBetweenSections),
               Text(
                 title,
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: CustomSizes.spaceBetweenItems),
+              SizedBox(height: Sizes.spaceBetweenItems),
               Text(
                 subtitle,
                 style: Theme.of(context).textTheme.labelMedium,
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: CustomSizes.spaceBetweenSections),
+              SizedBox(height: Sizes.spaceBetweenSections),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(

@@ -22,7 +22,7 @@ class AppColors{
   static Color buttonSecondary = Color(0xFF6c757D);
   static Color buttonDisabled = Color(0xFFc4c4c4);
 
-  static Color borderPrimary = Color(0xFFd9d9d9);
+  static const Color borderPrimary = Color(0xFFd9d9d9);
   static Color borderSecondary = Color(0xFFe6e6e6);
 
   static Color error = Color(0xFFd32f2f);

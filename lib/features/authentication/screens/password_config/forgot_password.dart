@@ -15,7 +15,7 @@ class ForgotPassword extends StatelessWidget {
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(CustomSizes.defaultSpace),
+          padding: EdgeInsets.all(Sizes.defaultSpace),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -24,20 +24,20 @@ class ForgotPassword extends StatelessWidget {
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: CustomSizes.spaceBetweenItems),
+              SizedBox(height: Sizes.spaceBetweenItems),
               Text(
                 AppTexts.forgetPasswordSubtitle,
                 style: Theme.of(context).textTheme.labelMedium,
                 textAlign: TextAlign.start,
               ),
-              SizedBox(height: CustomSizes.spaceBetweenSections * 2),
+              SizedBox(height: Sizes.spaceBetweenSections * 2),
               TextFormField(
                 decoration: InputDecoration(
                   labelText: AppTexts.email,
                   prefixIcon: Icon(Iconsax.direct_right),
                 ),
               ),
-              SizedBox(height: CustomSizes.spaceBetweenSections),
+              SizedBox(height: Sizes.spaceBetweenSections),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(

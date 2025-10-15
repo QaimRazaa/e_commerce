@@ -15,7 +15,7 @@ class OnBoardingSkip extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       top: DeviceUtils.appBarHeight,
-      right: CustomSizes.defaultSpace,
+      right: Sizes.defaultSpace,
       child: TextButton(
         onPressed: () => OnboardingController.instance.skipPage(),
         child: Text('Skip'),
@@ -31,7 +31,7 @@ class OnBoardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(CustomSizes.defaultSpace),
+      padding: EdgeInsets.all(Sizes.defaultSpace),
       child: Column(
         children: [
           Image(
@@ -44,7 +44,7 @@ class OnBoardingPage extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineMedium,
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: CustomSizes.spaceBetweenItems),
+          SizedBox(height: Sizes.spaceBetweenItems),
           Text(
             subTitle,
             style: Theme.of(context).textTheme.bodyMedium,
@@ -65,7 +65,7 @@ class OnBoardingDotNav extends StatelessWidget {
     final dark = HelperFunctions.isDarkMode(context);
     return Positioned(
       bottom: DeviceUtils.bottomNav(context) + 25,
-      left: CustomSizes.defaultSpace,
+      left: Sizes.defaultSpace,
       child: SmoothPageIndicator(
         controller: controller.pageController,
         onDotClicked: controller.dotNavigationClickButton,
@@ -86,7 +86,7 @@ class OnBoardingNextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = HelperFunctions.isDarkMode(context);
     return Positioned(
-      right: CustomSizes.defaultSpace,
+      right: Sizes.defaultSpace,
       bottom: DeviceUtils.bottomNav(context),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(

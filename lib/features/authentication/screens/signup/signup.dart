@@ -21,7 +21,7 @@ class _SignupScreenState extends State<SignupScreen> {
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(CustomSizes.defaultSpace),
+          padding: EdgeInsets.all(Sizes.defaultSpace),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -29,11 +29,11 @@ class _SignupScreenState extends State<SignupScreen> {
                 AppTexts.signUpTitle,
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
-              SizedBox(height: CustomSizes.spaceBetweenSections),
+              SizedBox(height: Sizes.spaceBetweenSections),
               SignUpFormWidget(),
-              SizedBox(height: CustomSizes.spaceBetweenSections),
+              SizedBox(height: Sizes.spaceBetweenSections),
               LoginFormDivider(dividerText: AppTexts.signUpWith),
-              SizedBox(height: CustomSizes.spaceBetweenSections),
+              SizedBox(height: Sizes.spaceBetweenSections),
               LoginSocialButtons(),
             ],
           ),

@@ -25,13 +25,13 @@ class VerticalImageAndText extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: EdgeInsets.only(right: CustomSizes.spaceBetweenItems),
+        padding: EdgeInsets.only(right: Sizes.spaceBetweenItems),
         child: Column(
           children: [
             Container(
               width: 56,
               height: 56,
-              padding: EdgeInsets.all(CustomSizes.sm),
+              padding: EdgeInsets.all(Sizes.sm),
               decoration: BoxDecoration(
                 color:
                 backGroundColor ??
@@ -50,7 +50,7 @@ class VerticalImageAndText extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: CustomSizes.spaceBetweenItems / 2),
+            SizedBox(height: Sizes.spaceBetweenItems / 2),
             SizedBox(
               width: 55,
               child: Text(

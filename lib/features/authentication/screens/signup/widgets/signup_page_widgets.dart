@@ -31,7 +31,7 @@ class SignUpFormWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(width: CustomSizes.spaceBetweenInputFields),
+              SizedBox(width: Sizes.spaceBetweenInputFields),
               Expanded(
                 child: TextFormField(
                   decoration: InputDecoration(
@@ -42,28 +42,28 @@ class SignUpFormWidget extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: CustomSizes.spaceBetweenInputFields),
+          SizedBox(height: Sizes.spaceBetweenInputFields),
           TextFormField(
             decoration: InputDecoration(
               labelText: AppTexts.userName,
               prefixIcon: Icon(Iconsax.user_edit),
             ),
           ),
-          SizedBox(height: CustomSizes.spaceBetweenInputFields),
+          SizedBox(height: Sizes.spaceBetweenInputFields),
           TextFormField(
             decoration: InputDecoration(
               labelText: AppTexts.email,
               prefixIcon: Icon(Iconsax.direct),
             ),
           ),
-          SizedBox(height: CustomSizes.spaceBetweenInputFields),
+          SizedBox(height: Sizes.spaceBetweenInputFields),
           TextFormField(
             decoration: InputDecoration(
               labelText: AppTexts.phoneNo,
               prefixIcon: Icon(Iconsax.call),
             ),
           ),
-          SizedBox(height: CustomSizes.spaceBetweenInputFields),
+          SizedBox(height: Sizes.spaceBetweenInputFields),
           TextFormField(
             obscureText: true,
             decoration: InputDecoration(
@@ -72,7 +72,7 @@ class SignUpFormWidget extends StatelessWidget {
               suffixIcon: Icon(Iconsax.eye_slash),
             ),
           ),
-          SizedBox(height: CustomSizes.spaceBetweenSections),
+          SizedBox(height: Sizes.spaceBetweenSections),
           Row(
             children: [
               SizedBox(
@@ -80,7 +80,7 @@ class SignUpFormWidget extends StatelessWidget {
                 height: 24,
                 child: Checkbox(value: true, onChanged: (value) {}),
               ),
-              SizedBox(width: CustomSizes.spaceBetweenItems),
+              SizedBox(width: Sizes.spaceBetweenItems),
               Text.rich(
                 TextSpan(
                   children: [
@@ -115,7 +115,7 @@ class SignUpFormWidget extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: CustomSizes.spaceBetweenSections),
+          SizedBox(height: Sizes.spaceBetweenSections),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(

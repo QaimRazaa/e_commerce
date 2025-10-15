@@ -24,19 +24,19 @@ class HomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   HomeAppBar(),
-                  SizedBox(height: CustomSizes.spaceBetweenSections),
+                  SizedBox(height: Sizes.spaceBetweenSections),
                   SearchContainer(text: 'Search in Store'),
-                  SizedBox(height: CustomSizes.spaceBetweenSections),
+                  SizedBox(height: Sizes.spaceBetweenSections),
 
                   Padding(
-                    padding: EdgeInsets.only(left: CustomSizes.defaultSpace),
+                    padding: EdgeInsets.only(left: Sizes.defaultSpace),
                     child: Column(
                       children: [
                         SectionHeading(
                           title: 'Popular Categories',
                           textColor: AppColors.white,
                         ),
-                        SizedBox(height: CustomSizes.spaceBetweenItems),
+                        SizedBox(height: Sizes.spaceBetweenItems),
                         HomeCategories(),
                       ],
                     ),
@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(CustomSizes.md),
+              padding: EdgeInsets.all(Sizes.md),
               child: Column(
                 children: [
                   PromoSlider(
@@ -56,6 +56,7 @@ class HomeScreen extends StatelessWidget {
                       AppImages.promoBanner4,
                     ],
                   ),
+                  SizedBox(height: Sizes.spaceBetweenSections),
                   ProductCardVertical(),
                 ],
               ),

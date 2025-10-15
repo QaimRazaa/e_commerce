@@ -4,9 +4,9 @@ import '../../utils/constants/sizes.dart';
 
 class CustomSpacingStyle{
   static  EdgeInsetsGeometry paddingWithAppBarHeight =  EdgeInsets.only(
-    top: CustomSizes.appBarHeight,
-    left: CustomSizes.defaultSpace,
-    bottom: CustomSizes.defaultSpace,
-    right: CustomSizes.defaultSpace,
+    top: Sizes.appBarHeight,
+    left: Sizes.defaultSpace,
+    bottom: Sizes.defaultSpace,
+    right: Sizes.defaultSpace,
   );
 }
