@@ -5,7 +5,7 @@ class Sizes{
   static double xs = 4;
   static double sm = 8;
   static const double md = 16;
-  static double lg = 24;
+  static const double lg = 24;
   static double xl = 32;
 
   static double iconXs = 12;

@@ -8,6 +8,7 @@ import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/text/section_heading.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -57,7 +58,7 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: Sizes.spaceBetweenSections),
-                  ProductCardVertical(),
+                  GirdLayout(itemCount: 4, itemBuilder: (_,index) => ProductCardVertical(),),
                 ],
               ),
             ),
@@ -67,3 +68,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
