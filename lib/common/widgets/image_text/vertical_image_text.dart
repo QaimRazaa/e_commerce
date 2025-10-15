@@ -45,7 +45,7 @@ class VerticalImageAndText extends StatelessWidget {
                   image: AssetImage(image),
                   fit: BoxFit.cover,
                   color: dark
-                      ? AppColors.light
+                      ? AppColors.dark
                       : AppColors.dark,
                 ),
               ),
@@ -57,7 +57,7 @@ class VerticalImageAndText extends StatelessWidget {
                 title,
                 style: Theme.of(
                   context,
-                ).textTheme.labelMedium!.apply(color: textColor),
+                ).textTheme.labelMedium!.apply(color: dark ? AppColors.black : textColor,),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),

@@ -1,3 +1,4 @@
+import 'package:e_commerce/common/widgets/products/products_cards/product_card_vertical.dart';
 import 'package:e_commerce/features/shop/screens/home/widgets/home_appbar_widget.dart';
 import 'package:e_commerce/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:e_commerce/features/shop/screens/home/widgets/promo_slider_widget.dart';
@@ -45,12 +46,17 @@ class HomeScreen extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.all(CustomSizes.md),
-              child: PromoSlider(
-                banner: [
-                  AppImages.promoBanner1,
-                  AppImages.promoBanner2,
-                  AppImages.promoBanner3,
-                  AppImages.promoBanner4,
+              child: Column(
+                children: [
+                  PromoSlider(
+                    banner: [
+                      AppImages.promoBanner1,
+                      AppImages.promoBanner2,
+                      AppImages.promoBanner3,
+                      AppImages.promoBanner4,
+                    ],
+                  ),
+                  ProductCardVertical(),
                 ],
               ),
             ),
