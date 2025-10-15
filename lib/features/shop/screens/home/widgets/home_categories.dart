@@ -1,26 +1,49 @@
 import 'package:flutter/material.dart';
-
 import '../../../../../common/widgets/image_text/vertical_image_text.dart';
 import '../../../../../utils/constants/image_strings.dart';
 
 class HomeCategories extends StatelessWidget {
-  const HomeCategories({
-    super.key,
-  });
+  const HomeCategories({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // List of category titles
+    final List<String> titles = [
+      'Sports',
+      'Clothes',
+      'Shoes',
+      'Cosmetics',
+      'Pets',
+      'Toys',
+      'Furniture',
+      'Jewelry',
+      'Electronics',
+    ];
+
+    final List<String> images = [
+      AppImages.sportIcon,
+      AppImages.clothIcon,
+      AppImages.shoeIcon,
+      AppImages.cosmeticIcon,
+      AppImages.animalIcon,
+      AppImages.toyIcon,
+      AppImages.furnitureIcon,
+      AppImages.jeweleryIcon,
+      AppImages.electronicsIcon,
+    ];
+
     return SizedBox(
       height: 80,
       child: ListView.builder(
         shrinkWrap: true,
-        itemCount: 7,
         scrollDirection: Axis.horizontal,
+        itemCount: images.length,
         itemBuilder: (_, index) {
           return VerticalImageAndText(
-            image: AppImages.sportIcon,
-            title: 'Sports',
-            onTap: () {},
+            image: images[index],
+            title: titles[index],
+            onTap: () {
+            },
           );
         },
       ),

@@ -1,6 +1,7 @@
 import 'package:e_commerce/common/styles/shadows.dart';
 import 'package:e_commerce/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:e_commerce/common/widgets/images/rounded_images.dart';
+import 'package:e_commerce/common/widgets/text/brand_title_text_with_verified_icon.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/constants/image_strings.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
@@ -9,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../icons/circular_product_icon.dart';
+import '../../text/product_price_text.dart';
 import '../../text/product_title_text.dart';
 
 class ProductCardVertical extends StatelessWidget {
@@ -21,7 +23,7 @@ class ProductCardVertical extends StatelessWidget {
       onTap: null,
       child: Container(
         width: 180,
-        padding: EdgeInsets.all(5),
+        padding: EdgeInsets.all(2),
         decoration: BoxDecoration(
           boxShadow: [ShadowStyle.verticalProductShadow],
           borderRadius: BorderRadius.circular(Sizes.productImageRadius),
@@ -83,46 +85,33 @@ class ProductCardVertical extends StatelessWidget {
                     smallSize: true,
                   ),
                   SizedBox(height: Sizes.spaceBetweenItems / 2.5),
-                  Row(
-                    children: [
-                      Text(
-                        'Nike',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      SizedBox(width: Sizes.xs),
-                      Icon(
-                        Iconsax.verify5,
-                        color: AppColors.primary,
-                        size: Sizes.iconXs,
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text('\$50.5',
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: Theme.of(context).textTheme.headlineMedium,),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: AppColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(Sizes.cardRadiusMd),
-                            bottomRight: Radius.circular(Sizes.productImageRadius)
-                          )
-                        ),
-                        child: SizedBox(
-                            width: Sizes.iconLg * 1.2,
-                            height: Sizes.iconLg * 1.2,
-                            child: Icon(Iconsax.add, color: AppColors.white,)),
-                      )
-                    ],
-                  )
+                  TBrandTitleWithVerifiedIcon(title: 'Nike'),
                 ],
               ),
+            ),
+            Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: Sizes.sm),
+                  child: ProductPriceText(price: '35.5'),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: AppColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(Sizes.cardRadiusMd),
+                      bottomRight: Radius.circular(Sizes.productImageRadius),
+                    ),
+                  ),
+                  child: SizedBox(
+                    width: Sizes.iconLg * 1.2,
+                    height: Sizes.iconLg * 1.2,
+                    child: Icon(Iconsax.add, color: AppColors.white),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

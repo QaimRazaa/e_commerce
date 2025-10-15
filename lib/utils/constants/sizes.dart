@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Sizes{
 
-  static double xs = 4;
+  static const double xs = 4;
   static double sm = 8;
   static const double md = 16;
   static const double lg = 24;
@@ -26,7 +26,7 @@ class Sizes{
 
   static double imageThumbSize = 80;
 
-  static double defaultSpace = 24;
+  static const double defaultSpace = 24;
   static double spaceBetweenItems = 16;
   static double spaceBetweenSections = 32;
 

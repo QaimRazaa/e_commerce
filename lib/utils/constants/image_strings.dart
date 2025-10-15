@@ -19,7 +19,7 @@ class AppImages{
   static String cosmeticIcon = "assets/icons/categories/icons8-cosmetics-64.png";
   static String animalIcon = "assets/icons/categories/icons8-dog-heart-64.png";
   static String toyIcon = "assets/icons/categories/icons8-wooden-toy-car-50.png";
-  static String furnitureIcon = "assets/icons/categories/assets/icons/categories/icons8-dining-chair-64.png";
+  static String furnitureIcon = "assets/icons/categories/icons8-dining-chair-64.png";
   static String jeweleryIcon = "assets/icons/categories/icons8-sparkling-diamond-64.png";
   static String electronicsIcon = "assets/icons/categories/icons8-smartphone-64.png";
 
