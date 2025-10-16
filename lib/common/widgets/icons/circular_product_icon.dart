@@ -26,18 +26,21 @@ class CircularProductIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = HelperFunctions.isDarkMode(context);
-    return Container(
-      width: width,
-      height: height,
-      decoration: BoxDecoration(
-        color: backgroundColor != null
-            ? backgroundColor!
-            : dark
-            ? AppColors.black.withOpacity(0.9)
-            : AppColors.white.withOpacity(0.9),
-        borderRadius: BorderRadius.circular(80),
+    return GestureDetector(
+      onTap: onPressed,
+      child: Container(
+        width: width,
+        height: height,
+        decoration: BoxDecoration(
+          color: backgroundColor != null
+              ? backgroundColor!
+              : dark
+              ? AppColors.black.withOpacity(0.9)
+              : AppColors.white.withOpacity(0.9),
+          borderRadius: BorderRadius.circular(80),
+        ),
+        child: IconButton(onPressed: onPressed, icon: Icon(icon,color: iconColor, size: size,)),
       ),
-      child: IconButton(onPressed: onPressed, icon: Icon(icon,color: iconColor, size: size,)),
     );
   }
 }

@@ -13,6 +13,9 @@ class AppImages{
 
   static String verifyEmail = "assets/images/animations/sammy-line-man-receives-a-mail.png";
 
+  static String user = "assets/images/profile/user.png";
+
+
   static String sportIcon = "assets/icons/categories/icons8-bowling-64.png";
   static String clothIcon = "assets/icons/categories/icons8-tailors-dummy-64.png";
   static String shoeIcon = "assets/icons/categories/icons8-shoes-64.png";

@@ -54,7 +54,7 @@ class VerticalImageAndText extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .labelMedium!
-                    .apply(color: dark ? AppColors.black : AppColors.white),
+                    .apply(color: dark ? AppColors.white : AppColors.white),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
