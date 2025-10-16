@@ -54,4 +54,7 @@ class AppImages{
   static const String productImage68 = "assets/images/products/tshirt_blue_without_collar_back.png";
   static const String productImage69 = "assets/images/products/tshirt_blue_without_collar_front.png";
 
+
+  static const String nikeBrandLogo = "assets/icons/brands/nike.png";
+
 }

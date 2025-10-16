@@ -6,8 +6,8 @@ import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/enums.dart';
 import '../../../utils/constants/sizes.dart';
 
-class TBrandTitleWithVerifiedIcon extends StatelessWidget {
-  const TBrandTitleWithVerifiedIcon({
+class BrandTitleWithVerifiedIcon extends StatelessWidget {
+  const BrandTitleWithVerifiedIcon({
     super.key,
     this.textColor,
     this.maxLines = 1,

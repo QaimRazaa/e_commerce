@@ -14,11 +14,25 @@ import '../../text/product_price_text.dart';
 import '../../text/product_title_text.dart';
 
 class ProductCardVertical extends StatelessWidget {
-  const ProductCardVertical({super.key});
+  const ProductCardVertical({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.brand,
+    required this.price,
+    this.discount,
+  });
+
+  final String image;
+  final String title;
+  final String brand;
+  final String price;
+  final String? discount;
 
   @override
   Widget build(BuildContext context) {
     final dark = HelperFunctions.isDarkMode(context);
+
     return GestureDetector(
       onTap: null,
       child: Container(
@@ -30,6 +44,7 @@ class ProductCardVertical extends StatelessWidget {
           color: dark ? AppColors.darkerGrey : AppColors.white,
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             RoundedContainer(
               height: 180,
@@ -38,27 +53,29 @@ class ProductCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   RoundedImages(
-                    imagePath: AppImages.productImage1,
+                    imagePath: image,
                     applyImageRadius: true,
                   ),
-                  Positioned(
-                    top: 5,
-                    left: 5,
-                    child: RoundedContainer(
-                      radius: Sizes.sm,
-                      backgroundColor: AppColors.secondary.withOpacity(0.8),
-                      padding: EdgeInsets.symmetric(
-                        horizontal: Sizes.sm,
-                        vertical: Sizes.xs,
-                      ),
-                      child: Text(
-                        '25%',
-                        style: Theme.of(
-                          context,
-                        ).textTheme.labelLarge!.apply(color: AppColors.black),
+                  if (discount != null)
+                    Positioned(
+                      top: 5,
+                      left: 5,
+                      child: RoundedContainer(
+                        radius: Sizes.sm,
+                        backgroundColor: AppColors.secondary.withOpacity(0.8),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: Sizes.sm,
+                          vertical: Sizes.xs,
+                        ),
+                        child: Text(
+                          discount!,
+                          style: Theme.of(context)
+                              .textTheme
+                              .labelLarge!
+                              .apply(color: AppColors.black),
+                        ),
                       ),
                     ),
-                  ),
                   Positioned(
                     top: 5,
                     right: 5,
@@ -80,12 +97,9 @@ class ProductCardVertical extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ProductTitleText(
-                    title: 'Green Nike Air Shoes',
-                    smallSize: true,
-                  ),
+                  ProductTitleText(title: title, smallSize: true),
                   SizedBox(height: Sizes.spaceBetweenItems / 2.5),
-                  TBrandTitleWithVerifiedIcon(title: 'Nike'),
+                  BrandTitleWithVerifiedIcon(title: brand),
                 ],
               ),
             ),
@@ -95,7 +109,7 @@ class ProductCardVertical extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsets.only(left: Sizes.sm),
-                  child: ProductPriceText(price: '35.5'),
+                  child: ProductPriceText(price: price),
                 ),
                 Container(
                   decoration: BoxDecoration(
