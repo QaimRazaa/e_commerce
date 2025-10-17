@@ -1,4 +1,6 @@
+import 'package:e_commerce/features/personalization/screens/profile/profile.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../utils/constants/colors.dart';
@@ -20,7 +22,7 @@ class UserProfileTile extends StatelessWidget {
       ),
       title: Text('Syed Qaim Raza', style: Theme.of(context).textTheme.headlineSmall!.apply(color: AppColors.white),),
       subtitle: Text('qaimr320@gmail.com', style: Theme.of(context).textTheme.bodyMedium!.apply(color: AppColors.white),),
-      trailing: IconButton(onPressed: (){}, icon: Icon(Iconsax.edit, color: AppColors.white,)),
+      trailing: IconButton(onPressed: () => Get.to(() => ProfileScreen()), icon: Icon(Iconsax.edit, color: AppColors.white,)),
     );
   }
 }
