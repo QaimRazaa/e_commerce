@@ -3,12 +3,13 @@ import 'package:e_commerce/common/widgets/custom_shapes/containers/primary_heade
 import 'package:e_commerce/common/widgets/images/circular_image.dart';
 import 'package:e_commerce/common/widgets/list_tile/settings_menu_tile.dart';
 import 'package:e_commerce/common/widgets/text/section_heading.dart';
+import 'package:e_commerce/features/personalization/screens/address/address.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/constants/image_strings.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-
+import 'package:get/get.dart';
 import '../../../../common/widgets/list_tile/user_profile_tile.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -46,6 +47,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.safe_home,
                     title: 'My Address',
                     subTitle: 'Set shopping address',
+                    onTap: () => Get.to(() => AddressScreen()) ,
                   ),
                   SettingsMenuTile(
                     icon: Iconsax.shopping_cart,
