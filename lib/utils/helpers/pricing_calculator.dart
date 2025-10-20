@@ -1,38 +1,43 @@
-class PricingCalculator {
-  static double calculateTotalPrice({
-    required double basePrice,
-    required double taxRate,
-    required double shippingCost,
-  }) {
-    final taxAmount = basePrice * taxRate;
-    return basePrice + taxAmount + shippingCost;
+class TPricingCalculator {
+  static double calculateTotalPrice(double productPrice, String location) {
+    double taxRate = getTaxRateForLocation(location);
+    double taxAmount = productPrice * taxRate;
+
+    double shippingCost = getShippingCost(location);
+
+    double totalPrice = productPrice + taxAmount + shippingCost;
+    return totalPrice;
   }
 
-  static double calculateTax({
-    required double basePrice,
-    required double taxRate,
-  }) {
-    return basePrice * taxRate;
+  static double calculateTotalPriceBasedOnLocation(
+    double productPrice,
+    String location,
+  ) {
+    double taxRate = getTaxRateForLocation(location);
+    double taxAmount = productPrice * taxRate;
+
+    double shippingCost = getShippingCost(location);
+
+    double totalPrice = productPrice + taxAmount + shippingCost;
+    return double.tryParse(totalPrice.toStringAsFixed(2)) ?? 0.0;
   }
 
-  static double calculateShippingCost({
-    required double distanceKm,
-    double baseRate = 100,
-    double ratePerKm = 20,
-  }) {
-    return baseRate + (distanceKm * ratePerKm);
+  static String calculateShippingCost(double productPrice, String location) {
+    double shippingCost = getShippingCost(location);
+    return shippingCost.toStringAsFixed(2);
+  }
+
+  static String calculateTax(double productPrice, String location) {
+    double taxRate = getTaxRateForLocation(location);
+    double taxAmount = productPrice * taxRate;
+    return taxAmount.toStringAsFixed(2);
   }
 
   static double getTaxRateForLocation(String location) {
-    switch (location.toLowerCase()) {
-      case 'lahore':
-        return 0.05;
-      case 'karachi':
-        return 0.06;
-      case 'islamabad':
-        return 0.07;
-      default:
-        return 0.05;
-    }
+    return 0.10;
+  }
+
+  static double getShippingCost(String location) {
+    return 5.00;
   }
 }

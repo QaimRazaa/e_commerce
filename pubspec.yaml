@@ -81,6 +81,7 @@ flutter:
     - assets/images/products/
     - assets/icons/categories/
     - assets/icons/brands/
+    - assets/icons/payment_methods/
     - assets/logos/
 
 

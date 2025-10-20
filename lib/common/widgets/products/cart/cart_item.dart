@@ -8,8 +8,8 @@ import '../../images/rounded_images.dart';
 import '../../text/brand_title_text_with_verified_icon.dart';
 import '../../text/product_title_text.dart';
 
-class CartItems extends StatelessWidget {
-  const CartItems({
+class CartItem extends StatelessWidget {
+  const CartItem({
     super.key,
   });
 
