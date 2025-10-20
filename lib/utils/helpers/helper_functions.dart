@@ -2,28 +2,29 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HelperFunctions {
-  static Color getColor(String value) {
-    switch (value.toLowerCase()) {
-      case 'green':
-        return Colors.green;
-      case 'red':
-        return Colors.red;
-      case 'blue':
-        return Colors.blue;
-      case 'pink':
-        return Colors.pink;
-      case 'grey':
-        return Colors.grey;
-      case 'purple':
-        return Colors.purple;
-      case 'black':
-        return Colors.black;
-      case 'white':
-        return Colors.white;
-      default:
-        return Colors.transparent;
+  static Color? getColor(String value) {
+
+    if (value == 'green') {
+      return Colors.green;
+    } else if (value == 'red') {
+      return Colors.red;
+    } else if (value == 'blue') {
+      return Colors.blue;
+    } else if (value == 'pink') {
+      return Colors.pink;
+    } else if (value == 'grey') {
+      return Colors.grey;
+    } else if (value == 'purple') {
+      return Colors.purple;
+    } else if (value == 'black') {
+      return Colors.black;
+    } else if (value == 'white') {
+      return Colors.white;
+    } else {
+      return Colors.transparent;
     }
   }
+
 
   static void showSnackBar(BuildContext context, String message,
       {Color background = Colors.black}) {
