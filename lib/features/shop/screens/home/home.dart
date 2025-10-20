@@ -12,36 +12,7 @@ import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/text/section_heading.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
-
-  // final products = [
-  //   {
-  //     'image': AppImages.productImage1,
-  //     'title': 'Nike Air Shoes',
-  //     'brand': 'Nike',
-  //     'price': '35.5',
-  //     'discount': '25%',
-  //   },
-  //   {
-  //     'image': AppImages.productImage12,
-  //     'title': 'Samsung S9',
-  //     'brand': 'Samsung',
-  //     'price': '42.0',
-  //     'discount': '15%',
-  //   },
-  //   {
-  //     'image': AppImages.productImage22,
-  //     'title': 'Nike BasketBall Shoes',
-  //     'brand': 'Nike',
-  //     'price': '39.9',
-  //   },
-  //   {
-  //     'image': AppImages.productImage65,
-  //     'title': 'Leather Jacket',
-  //     'brand': 'ZARA',
-  //     'price': '29.5',
-  //   },
-  // ];
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
