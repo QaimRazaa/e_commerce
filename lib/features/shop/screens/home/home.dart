@@ -14,34 +14,34 @@ import '../../../../common/widgets/text/section_heading.dart';
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
-  final products = [
-    {
-      'image': AppImages.productImage1,
-      'title': 'Nike Air Shoes',
-      'brand': 'Nike',
-      'price': '35.5',
-      'discount': '25%',
-    },
-    {
-      'image': AppImages.productImage12,
-      'title': 'Samsung S9',
-      'brand': 'Samsung',
-      'price': '42.0',
-      'discount': '15%',
-    },
-    {
-      'image': AppImages.productImage22,
-      'title': 'Nike BasketBall Shoes',
-      'brand': 'Nike',
-      'price': '39.9',
-    },
-    {
-      'image': AppImages.productImage65,
-      'title': 'Leather Jacket',
-      'brand': 'ZARA',
-      'price': '29.5',
-    },
-  ];
+  // final products = [
+  //   {
+  //     'image': AppImages.productImage1,
+  //     'title': 'Nike Air Shoes',
+  //     'brand': 'Nike',
+  //     'price': '35.5',
+  //     'discount': '25%',
+  //   },
+  //   {
+  //     'image': AppImages.productImage12,
+  //     'title': 'Samsung S9',
+  //     'brand': 'Samsung',
+  //     'price': '42.0',
+  //     'discount': '15%',
+  //   },
+  //   {
+  //     'image': AppImages.productImage22,
+  //     'title': 'Nike BasketBall Shoes',
+  //     'brand': 'Nike',
+  //     'price': '39.9',
+  //   },
+  //   {
+  //     'image': AppImages.productImage65,
+  //     'title': 'Leather Jacket',
+  //     'brand': 'ZARA',
+  //     'price': '29.5',
+  //   },
+  // ];
 
   @override
   Widget build(BuildContext context) {
@@ -71,8 +71,7 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: Sizes.spaceBetweenSections,)
-
+                  SizedBox(height: Sizes.spaceBetweenSections),
                 ],
               ),
             ),
@@ -96,15 +95,13 @@ class HomeScreen extends StatelessWidget {
                   ),
                   SizedBox(height: Sizes.spaceBetweenItems),
                   GirdLayout(
-                    itemCount: products.length,
+                    itemCount: 4,
                     itemBuilder: (_, index) {
-                      final product = products[index];
                       return ProductCardVertical(
-                        image: product['image']!,
-                        title: product['title']!,
-                        brand: product['brand']!,
-                        price: product['price']!,
-                        discount: product['discount'],
+                        image: AppImages.productImage1,
+                        title: 'Nike Green Shoes',
+                        brand: 'Nike',
+                        price: '35.5',
                       );
                     },
                   ),

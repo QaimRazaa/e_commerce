@@ -27,7 +27,7 @@ class Wishlist extends StatelessWidget {
               .headlineMedium,
         ),
         action: [
-          CircularProductIcon(
+          CircularIcon(
             icon: Iconsax.add, onPressed: () => Get.to(HomeScreen()),)
         ],
       ), body: SingleChildScrollView(

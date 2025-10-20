@@ -5,8 +5,8 @@ import 'package:iconsax/iconsax.dart';
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/sizes.dart';
 
-class CircularProductIcon extends StatelessWidget {
-  const CircularProductIcon({
+class CircularIcon extends StatelessWidget {
+  const CircularIcon({
     super.key,
     this.width,
     this.height,

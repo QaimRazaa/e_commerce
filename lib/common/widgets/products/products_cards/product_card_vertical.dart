@@ -2,6 +2,7 @@ import 'package:e_commerce/common/styles/shadows.dart';
 import 'package:e_commerce/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:e_commerce/common/widgets/images/rounded_images.dart';
 import 'package:e_commerce/common/widgets/text/brand_title_text_with_verified_icon.dart';
+import 'package:e_commerce/features/shop/screens/product_details/product_detail.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/constants/image_strings.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
@@ -12,6 +13,7 @@ import 'package:iconsax/iconsax.dart';
 import '../../icons/circular_product_icon.dart';
 import '../../text/product_price_text.dart';
 import '../../text/product_title_text.dart';
+import 'package:get/get.dart';
 
 class ProductCardVertical extends StatelessWidget {
   const ProductCardVertical({
@@ -34,7 +36,7 @@ class ProductCardVertical extends StatelessWidget {
     final dark = HelperFunctions.isDarkMode(context);
 
     return GestureDetector(
-      onTap: null,
+      onTap: () => Get.to(() => ProductDetailScreen()),
       child: Container(
         width: 180,
         padding: EdgeInsets.all(2),
@@ -80,7 +82,7 @@ class ProductCardVertical extends StatelessWidget {
                     top: 5,
                     right: 5,
                     child: Center(
-                      child: CircularProductIcon(
+                      child: CircularIcon(
                         icon: Iconsax.heart5,
                         width: Sizes.xl,
                         height: Sizes.xl,
