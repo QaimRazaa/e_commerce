@@ -4,6 +4,7 @@ import 'package:e_commerce/common/widgets/products/products_cards/product_card_v
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../common/widgets/products/sortable/sortable_products.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class AllProductsScreen extends StatelessWidget {
@@ -16,37 +17,10 @@ class AllProductsScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(Sizes.defaultSpace),
-          child: Column(
-            children: [
-              DropdownButtonFormField(
-                decoration: InputDecoration(prefixIcon: Icon(Iconsax.sort)),
-                onChanged: (value) {},
-                items:
-                    [
-                          'Name',
-                          'Higher Price',
-                          'Lower Price',
-                          'Sale',
-                          'Newest',
-                          'Popularity',
-                        ]
-                        .map(
-                          (option) => DropdownMenuItem(
-                            value: option,
-                            child: Text(option),
-                          ),
-                        )
-                        .toList(),
-              ),
-              SizedBox(height: Sizes.spaceBetweenSections),
-              GirdLayout(
-                itemCount: 4,
-                itemBuilder: (_, index) => ProductCardVertical(),
-              ),
-            ],
-          ),
+          child: SortableProducts(),
         ),
       ),
     );
   }
 }
+
