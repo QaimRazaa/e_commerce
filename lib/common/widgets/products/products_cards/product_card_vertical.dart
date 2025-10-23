@@ -57,7 +57,6 @@ class ProductCardVertical extends StatelessWidget {
                     imagePath: image,
                     applyImageRadius: true,
                   ),
-                  if (discount != null)
                     Positioned(
                       top: 5,
                       left: 5,
@@ -69,7 +68,7 @@ class ProductCardVertical extends StatelessWidget {
                           vertical: Sizes.xs,
                         ),
                         child: Text(
-                          discount!,
+                          ('25%'),
                           style: Theme.of(context)
                               .textTheme
                               .labelLarge!

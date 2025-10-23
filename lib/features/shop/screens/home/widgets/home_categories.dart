@@ -1,4 +1,6 @@
+import 'package:e_commerce/features/shop/screens/sub_category/sub_categories.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../../../../common/widgets/image_text/vertical_image_text.dart';
 import '../../../../../utils/constants/image_strings.dart';
 
@@ -43,6 +45,9 @@ class HomeCategories extends StatelessWidget {
             image: images[index],
             title: titles[index],
             onTap: () {
+              if (titles[index] == 'Sports') {
+                Get.to(() => const SubCategoriesScreen() );
+              }
             },
           );
         },
