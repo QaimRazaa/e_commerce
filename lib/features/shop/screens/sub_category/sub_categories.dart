@@ -27,7 +27,7 @@ class SubCategoriesScreen extends StatelessWidget {
               Column(
                 children: [
                   SectionHeading(
-                    title: 'Sports short',
+                    title: 'Sports Shoes',
                     onPressed: () {},
                     actionButton: true,
                   ),

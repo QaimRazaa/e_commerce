@@ -19,26 +19,28 @@ class Wishlist extends StatelessWidget {
       appBar: CustomAppBar(
         title: Text(
           'WishList',
-          style: Theme
-              .of(context)
-              .textTheme
-              .headlineMedium,
+          style: Theme.of(context).textTheme.headlineMedium,
         ),
         action: [
           CircularIcon(
-            icon: Iconsax.add, onPressed: () => Get.to(HomeScreen()),)
+            icon: Iconsax.add,
+            onPressed: () => Get.to(HomeScreen()),
+          ),
         ],
-      ), body: SingleChildScrollView(
-      child: Padding(padding: EdgeInsets.all(Sizes.defaultSpace),
-        child: Column(
-          children: [
-            GirdLayout(itemCount: 6,
-                itemBuilder: (_, index) =>
-                    ProductCardVertical(
-                        image: AppImages.productImage1, title: 'Green Nike Air Shoes', brand: 'Nike', price: '35.0'))
-          ],
-        ),),
-    ),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(Sizes.defaultSpace),
+          child: Column(
+            children: [
+              GirdLayout(
+                itemCount: 6,
+                itemBuilder: (_, index) => ProductCardVertical(),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

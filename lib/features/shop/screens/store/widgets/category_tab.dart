@@ -39,10 +39,6 @@ class CategoryTab extends StatelessWidget {
             GirdLayout(
               itemCount: 4,
               itemBuilder: (_, index) => ProductCardVertical(
-                image: AppImages.productImage1,
-                title: 'Nike Air Shoes',
-                brand: 'Nike',
-                price: '35.9',
               ),
             ),
           ],

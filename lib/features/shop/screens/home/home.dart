@@ -1,4 +1,5 @@
 import 'package:e_commerce/common/widgets/products/products_cards/product_card_vertical.dart';
+import 'package:e_commerce/features/shop/screens/all_products/all_products.dart';
 import 'package:e_commerce/features/shop/screens/home/widgets/home_appbar_widget.dart';
 import 'package:e_commerce/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:e_commerce/features/shop/screens/home/widgets/promo_slider_widget.dart';
@@ -6,6 +7,7 @@ import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/constants/image_strings.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/layouts/grid_layout.dart';
@@ -61,7 +63,7 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: Sizes.spaceBetweenSections),
                   SectionHeading(
                     title: 'Popular Products',
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => AllProductsScreen()),
                     actionButton: true,
                   ),
                   SizedBox(height: Sizes.spaceBetweenItems),
@@ -69,10 +71,7 @@ class HomeScreen extends StatelessWidget {
                     itemCount: 4,
                     itemBuilder: (_, index) {
                       return ProductCardVertical(
-                        image: AppImages.productImage1,
-                        title: 'Nike Green Shoes',
-                        brand: 'Nike',
-                        price: '35.5',
+
                       );
                     },
                   ),

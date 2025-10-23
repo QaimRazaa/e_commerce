@@ -4,6 +4,7 @@ import 'package:e_commerce/common/widgets/images/rounded_images.dart';
 import 'package:e_commerce/common/widgets/text/brand_title_text_with_verified_icon.dart';
 import 'package:e_commerce/features/shop/screens/product_details/product_detail.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
+import 'package:e_commerce/utils/constants/image_strings.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:e_commerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -17,18 +18,8 @@ import 'package:get/get.dart';
 class ProductCardVertical extends StatelessWidget {
   const ProductCardVertical({
     super.key,
-    required this.image,
-    required this.title,
-    required this.brand,
-    required this.price,
-    this.discount,
   });
 
-  final String image;
-  final String title;
-  final String brand;
-  final String price;
-  final String? discount;
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +45,7 @@ class ProductCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   RoundedImages(
-                    imagePath: image,
+                    imagePath: AppImages.productImage1,
                     applyImageRadius: true,
                   ),
                     Positioned(
@@ -97,9 +88,9 @@ class ProductCardVertical extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ProductTitleText(title: title, smallSize: true),
+                  ProductTitleText(title: 'Green Nike Sports Shoes', smallSize: true),
                   SizedBox(height: Sizes.spaceBetweenItems / 2.5),
-                  BrandTitleWithVerifiedIcon(title: brand),
+                  BrandTitleWithVerifiedIcon(title: 'Nike'),
                 ],
               ),
             ),
@@ -109,7 +100,7 @@ class ProductCardVertical extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsets.only(left: Sizes.sm),
-                  child: ProductPriceText(price: price),
+                  child: ProductPriceText(price: '256'),
                 ),
                 Container(
                   decoration: BoxDecoration(
