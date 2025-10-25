@@ -1,3 +1,4 @@
+import 'package:e_commerce/common/widgets/appbar/appbar.dart';
 import 'package:e_commerce/features/authentication/screens/login/widgets/login_page_widgets.dart';
 import 'package:e_commerce/features/authentication/screens/signup/widgets/signup_page_widgets.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
@@ -15,7 +16,7 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: CustomAppBar(backArrow: true,),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(Sizes.defaultSpace),
