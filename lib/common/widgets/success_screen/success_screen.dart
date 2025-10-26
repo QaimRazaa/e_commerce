@@ -2,6 +2,7 @@ import 'package:e_commerce/common/styles/spacing_style.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:e_commerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class SuccessScreen extends StatelessWidget {
   final String imagePath;
@@ -25,9 +26,10 @@ class SuccessScreen extends StatelessWidget {
           padding: CustomSpacingStyle.paddingWithAppBarHeight * 2,
           child: Column(
             children: [
-              Image(
-                image: AssetImage(imagePath),
+              Lottie.asset(
+                imagePath,
                 width: HelperFunctions.screenWidth(),
+                fit: BoxFit.contain,
               ),
               SizedBox(height: Sizes.spaceBetweenSections),
               Text(

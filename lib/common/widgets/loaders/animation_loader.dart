@@ -29,7 +29,7 @@ class AnimationLoaderWidget extends StatelessWidget {
           Lottie.asset(
             animation,
             width: MediaQuery.of(context).size.width * 0.8,
-          ), // Display Lottie animation
+          ),
           const SizedBox(height: Sizes.defaultSpace),
           Text(
             text,

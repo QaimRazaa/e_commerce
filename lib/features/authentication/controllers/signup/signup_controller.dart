@@ -74,7 +74,7 @@ class SignUpController extends GetxController {
         message: 'Your account has been created! Verify email to Continue',
       );
 
-      Get.to(() => VerifyEmailScreen());
+      Get.to(() => VerifyEmailScreen(email: email.text.trim(),));
     } catch (e) {
       CustomFullScreenLoader.stopLoading();
 
