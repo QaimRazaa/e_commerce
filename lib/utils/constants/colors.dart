@@ -6,6 +6,7 @@ class AppColors{
   static const Color primary = Color(0xFF4B68FF);
   static Color secondary = Color(0xFFFFE24B);
   static Color accent = Color(0xFFb0c7ff);
+  static const Color dashboardAppbarBackground = Color(0xFF4b68ff);
 
   static Color textPrimary = Color(0xFF333333);
   static Color textSecondary = Color(0xFF6c757D);

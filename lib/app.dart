@@ -1,3 +1,4 @@
+import 'package:e_commerce/bindings/general_binding.dart';
 import 'package:e_commerce/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/theme/app_theme.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: CustomAppTheme.lightTheme,
       darkTheme: CustomAppTheme.darkTheme,
+      initialBinding: GeneralBindings(),
       home: Scaffold(backgroundColor: AppColors.primary, body: Center(child: CircularProgressIndicator(color: AppColors.white,),),),
     );
   }

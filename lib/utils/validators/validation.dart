@@ -41,7 +41,7 @@ class AppValidators {
       return 'Password is required';
     }
 
-    final passwordRegex = RegExp(r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$');
+    final passwordRegex = RegExp(r'^(?=.*[A-Za-z])(?=.*\d).{6,}$');
 
     if (!passwordRegex.hasMatch(value)) {
       return 'Password must contain letters and numbers';
