@@ -1,6 +1,8 @@
+import 'package:e_commerce/features/authentication/controllers/login/login_controller.dart';
 import 'package:e_commerce/features/authentication/screens/password_config/forgot_password.dart';
 import 'package:e_commerce/features/authentication/screens/signup/signup.dart';
 import 'package:e_commerce/navigation_bar.dart';
+import 'package:e_commerce/utils/validators/validation.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:get/get.dart';
@@ -12,10 +14,7 @@ import '../../../../../utils/constants/text_strings.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
 
 class LoginFormDivider extends StatelessWidget {
-  const LoginFormDivider({
-    super.key,
-    required this.dividerText,
-  });
+  const LoginFormDivider({super.key, required this.dividerText});
 
   final String dividerText;
 
@@ -34,10 +33,7 @@ class LoginFormDivider extends StatelessWidget {
             endIndent: 5,
           ),
         ),
-        Text(
-          dividerText,
-          style: Theme.of(context).textTheme.labelMedium,
-        ),
+        Text(dividerText, style: Theme.of(context).textTheme.labelMedium),
         Flexible(
           child: Divider(
             color: dark ? AppColors.darkGrey : AppColors.grey,
@@ -52,9 +48,7 @@ class LoginFormDivider extends StatelessWidget {
 }
 
 class LoginSocialButtons extends StatelessWidget {
-  const LoginSocialButtons({
-    super.key,
-  });
+  const LoginSocialButtons({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -96,31 +90,45 @@ class LoginSocialButtons extends StatelessWidget {
 }
 
 class LoginForm extends StatelessWidget {
-  const LoginForm({
-    super.key,
-  });
+  const LoginForm({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(LoginController());
     return Form(
+      key: controller.loginFormKey,
       child: Padding(
-        padding: EdgeInsets.symmetric(
-          vertical: Sizes.spaceBetweenSections,
-        ),
+        padding: EdgeInsets.symmetric(vertical: Sizes.spaceBetweenSections),
         child: Column(
           children: [
             TextFormField(
+              controller: controller.email,
+              validator: (value) => AppValidators.validateEmail(value),
               decoration: InputDecoration(
                 prefixIcon: Icon(Iconsax.direct_right),
                 labelText: AppTexts.email,
               ),
             ),
             SizedBox(height: Sizes.spaceBetweenInputFields),
-            TextFormField(
-              decoration: InputDecoration(
-                prefixIcon: Icon(Iconsax.password_check),
-                labelText: AppTexts.password,
-                suffixIcon: Icon(Iconsax.eye_slash),
+            Obx(
+              () => TextFormField(
+                validator: (value) =>
+                    AppValidators.validateEmptyText('password', value),
+                controller: controller.password,
+                obscureText: controller.hidePassword.value,
+                decoration: InputDecoration(
+                  labelText: AppTexts.password,
+                  prefixIcon: Icon(Iconsax.password_check),
+                  suffixIcon: IconButton(
+                    onPressed: () => controller.hidePassword.value =
+                        !controller.hidePassword.value,
+                    icon: Icon(
+                      controller.hidePassword.value
+                          ? Iconsax.eye_slash
+                          : Iconsax.eye,
+                    ),
+                  ),
+                ),
               ),
             ),
             SizedBox(height: Sizes.spaceBetweenInputFields / 2),
@@ -129,7 +137,13 @@ class LoginForm extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Checkbox(value: true, onChanged: (value) {}),
+                    Obx(
+                      () => Checkbox(
+                        value: controller.rememberMe.value,
+                        onChanged: (value) => controller.rememberMe.value =
+                            !controller.rememberMe.value,
+                      ),
+                    ),
                     Text(AppTexts.rememberMe),
                   ],
                 ),
@@ -145,7 +159,7 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () => Get.to(() => CustomNavigationBar()),
+                onPressed: () => controller.emailAndPasswordSignIn(),
                 child: Text(AppTexts.signIn),
               ),
             ),
@@ -168,10 +182,7 @@ class LoginForm extends StatelessWidget {
 }
 
 class LoginHeader extends StatelessWidget {
-  const LoginHeader({
-    super.key,
-    required this.dark,
-  });
+  const LoginHeader({super.key, required this.dark});
 
   final bool dark;
 
