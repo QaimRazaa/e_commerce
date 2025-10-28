@@ -1,5 +1,7 @@
+import 'package:e_commerce/features/authentication/controllers/forget_password/foget_password_controller.dart';
 import 'package:e_commerce/features/authentication/screens/password_config/reset_password.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
+import 'package:e_commerce/utils/validators/validation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -11,6 +13,7 @@ class ForgotPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(ForgetPasswordController());
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
@@ -31,17 +34,22 @@ class ForgotPassword extends StatelessWidget {
                 textAlign: TextAlign.start,
               ),
               SizedBox(height: Sizes.spaceBetweenSections * 2),
-              TextFormField(
-                decoration: InputDecoration(
-                  labelText: AppTexts.email,
-                  prefixIcon: Icon(Iconsax.direct_right),
+              Form(
+                key: controller.forgetPasswordFormKey,
+                child: TextFormField(
+                  controller: controller.email,
+                  validator: AppValidators.validateEmail,
+                  decoration: InputDecoration(
+                    labelText: AppTexts.email,
+                    prefixIcon: Icon(Iconsax.direct_right),
+                  ),
                 ),
               ),
               SizedBox(height: Sizes.spaceBetweenSections),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Get.off(() => ResetPassword()),
+                  onPressed: () => controller.sendPasswordResetEmail(),
                   child: Text(AppTexts.submit),
                 ),
               ),
