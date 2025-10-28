@@ -10,6 +10,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 import '../../../features/authentication/screens/onboarding/onboarding.dart';
 
@@ -85,6 +86,8 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
+
+
   Future<void> sendEmailVerification() async {
     try {
       await _auth.currentUser?.sendEmailVerification();
@@ -100,6 +103,34 @@ class AuthenticationRepository extends GetxController {
       throw 'Something went wrong. PLease try again';
     }
   }
+
+  Future<UserCredential?> signInWithGoogle() async {
+    try {
+      final GoogleSignInAccount? userAccount = await GoogleSignIn().signIn();
+      if (userAccount == null) {
+        return null;
+      }
+      final GoogleSignInAuthentication googleAuth = await userAccount.authentication;
+      final credentials = GoogleAuthProvider.credential(
+        accessToken: googleAuth.accessToken,
+        idToken: googleAuth.idToken,
+      );
+      return await _auth.signInWithCredential(credentials);
+
+    } on FirebaseAuthException catch (e) {
+      throw CustomFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw CustomFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const CustomFormatException();
+    } on PlatformException catch (e) {
+      throw CustomPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong. PLease try again';
+    }
+  }
+
+
 
   Future<void> logout() async {
     try {
