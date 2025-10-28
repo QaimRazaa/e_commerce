@@ -52,6 +52,7 @@ dependencies:
   lottie: ^3.3.2
   connectivity_plus: ^7.0.0
   cloud_firestore: ^6.0.3
+  google_sign_in: ^7.2.0
 
 
 
